@@ -48,17 +48,34 @@
 //     Console.WriteLine($"Chỉ số BMI của bạn là: {bmi}");
 // }
 #endregion
-#region Tính số ngày trong tuần và số ngày lẻ
-// Console.Write("Xin vui lòng nhập số ngày: ");
-// int soNgay = Convert.ToInt32(Console.ReadLine());
-// int soTuan = soNgay / 7;
-// int soNgayLe = soNgay % 7;
-// Console.WriteLine($"{soTuan} tuần và {soNgayLe} ngày");
-#endregion
-#region Tính tổng giá trị đơn hàng sau khi áp dụng giảm giá
-Console.Write("Vui lòng nhập vào giá trị đơn hàng: ");
-decimal price = Convert.ToDecimal(Console.ReadLine());
-Console.Write("Vui lòng nhập vào phần trăm giảm giá: ");
-decimal discount = Convert.ToDecimal(Console.ReadLine());
+#region
+//INPUT
+// Hãy nhập bán kính hình tròn
+Console.WriteLine($"Hãy nhập bán kính vào");
+
+string banKinh = Console.ReadLine();
+
+//Convert String sang Double
+
+double banKinhDouble = Convert.ToDouble(banKinh);
+
+
+//PROCESS
+//Chu vi hình tròn
+double chuVi=0.0;
+double dienTich = 0.0;
+chuVi = 2 * Math.PI * banKinhDouble;
+
+//Diện tích hình tròn
+
+ dienTich = Math.PI * banKinhDouble * banKinhDouble;
+
+//OUTPUT
+
+Console.WriteLine($"Chu vi của hình tròn là {chuVi}");
+
+Console.WriteLine($"Diện tích của hình tròn là {dienTich}");
+
+
 
 #endregion
