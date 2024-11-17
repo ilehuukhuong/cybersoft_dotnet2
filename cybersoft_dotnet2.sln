@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session8", "Session8\Sessio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session_Optional", "Session_Optional\Session_Optional.csproj", "{F4C74295-EBB3-4E94-AAE8-3B121EF70EBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baitapvenhabuoi8", "baitapvenhabuoi8\baitapvenhabuoi8.csproj", "{D2E2AB35-846B-4EED-B5DE-DF5877E39C4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{F4C74295-EBB3-4E94-AAE8-3B121EF70EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4C74295-EBB3-4E94-AAE8-3B121EF70EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4C74295-EBB3-4E94-AAE8-3B121EF70EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2E2AB35-846B-4EED-B5DE-DF5877E39C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2E2AB35-846B-4EED-B5DE-DF5877E39C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2E2AB35-846B-4EED-B5DE-DF5877E39C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2E2AB35-846B-4EED-B5DE-DF5877E39C4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
