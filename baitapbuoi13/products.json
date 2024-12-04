@@ -1,0 +1,9 @@
+[
+  {
+    "ProductCode": "MS1",
+    "ProductName": "Binh Nuoc",
+    "Price": 10000.0,
+    "StockQuantity": 20,
+    "TotalValue": 200000.0
+  }
+]
