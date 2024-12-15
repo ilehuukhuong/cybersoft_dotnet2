@@ -47,6 +47,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "christmas", "christmas\chri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "noel", "noel\noel.csproj", "{E91C2077-A27D-4F2F-B8D9-AD920D9A0973}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baitapbuoi15", "baitapbuoi15\baitapbuoi15.csproj", "{D0910F6A-1664-450E-8E8F-9C93DE144A21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baitapbuoi15_2", "baitapbuoi15_2\baitapbuoi15_2.csproj", "{401E0639-6EE5-460F-94E4-22D8810E63D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +145,14 @@ Global
 		{E91C2077-A27D-4F2F-B8D9-AD920D9A0973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E91C2077-A27D-4F2F-B8D9-AD920D9A0973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E91C2077-A27D-4F2F-B8D9-AD920D9A0973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0910F6A-1664-450E-8E8F-9C93DE144A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0910F6A-1664-450E-8E8F-9C93DE144A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0910F6A-1664-450E-8E8F-9C93DE144A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0910F6A-1664-450E-8E8F-9C93DE144A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{401E0639-6EE5-460F-94E4-22D8810E63D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401E0639-6EE5-460F-94E4-22D8810E63D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401E0639-6EE5-460F-94E4-22D8810E63D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401E0639-6EE5-460F-94E4-22D8810E63D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
