@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baitapbuoi15", "baitapbuoi1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baitapbuoi15_2", "baitapbuoi15_2\baitapbuoi15_2.csproj", "{401E0639-6EE5-460F-94E4-22D8810E63D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session17_PhuDao_OOP", "Session17_PhuDao_OOP\Session17_PhuDao_OOP.csproj", "{C5F0CBBC-8FF4-457D-A9AA-A7D041B5E909}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{401E0639-6EE5-460F-94E4-22D8810E63D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{401E0639-6EE5-460F-94E4-22D8810E63D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{401E0639-6EE5-460F-94E4-22D8810E63D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F0CBBC-8FF4-457D-A9AA-A7D041B5E909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F0CBBC-8FF4-457D-A9AA-A7D041B5E909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F0CBBC-8FF4-457D-A9AA-A7D041B5E909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F0CBBC-8FF4-457D-A9AA-A7D041B5E909}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
