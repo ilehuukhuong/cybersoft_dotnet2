@@ -1,0 +1,35 @@
+﻿@inject WalletService Wallet
+@code {
+    private decimal amount;
+
+    private void Submit()
+    {
+        if (amount > 0)
+        {
+            Wallet.Deposit(amount);
+            OnClose.InvokeAsync();
+        }
+    }
+}
+
+<div class="modal show d-block">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Deposit Money</h5>
+                <button class="btn-close" @onclick="() => OnClose.InvokeAsync()"></button>
+            </div>
+            <div class="modal-body">
+                <input type="number" @bind="amount" class="form-control" placeholder="Amount" />
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" @onclick="() => OnClose.InvokeAsync()">Close</button>
+                <button class="btn btn-primary" @onclick="Submit">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public EventCallback OnClose { get; set; }
+}

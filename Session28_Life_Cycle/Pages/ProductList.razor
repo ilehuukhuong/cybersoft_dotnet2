@@ -1,0 +1,137 @@
+﻿@page "/products"
+@inject ProductService ProductService
+
+<h1 class="text-primary">Product List</h1>
+
+@* thanh search *@
+<div class="input-group mb-3">
+    <input
+        type="text"
+        class="form-control"
+        placeholder="Search product...."
+        @bind="searchQuery"
+        @bind:event="oninput"
+        @onkeypress="HandleKeyPress"
+    >
+    <button class="btn btn-primary" @onclick="SearchProducts">Search</button>
+</div>
+
+@if (isLoading)
+{
+    <div class="text-center">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <p>Loading.......</p>
+    </div>
+}
+else if (products.Count == 0)
+{
+    <p>No product found...</p>
+}
+else
+{
+    <div class="row row-cols-md-3">
+        @foreach (var product in displayProducts)
+        {
+            <ProductItem product="product" />
+        }
+    </div>
+}
+
+@* phân trang *@
+<div class="mt-4 d-flex justify-content-center">
+    <button class="btn btn-primary">Prev</button>
+    <span>Page @currentPage/@totalPages</span>
+    <button class="btn btn-primary" @onclick="NextPage">Next</button>
+</div>
+
+
+@code {
+    private List<Product> products = new List<Product>();
+
+    @* biến list product để show list sản phẩm dựa vào page *@
+    private List<Product> displayProducts = new List<Product>();
+
+    @* define biến filterProducts để show list sản phẩm theo keyword *@
+    private List<Product> filterProducts = new List<Product>();
+
+    private bool isLoading = true; // biến kiểm tra xem có đang load dữ liệu hay không
+    private string searchQuery = ""; // biến lưu trữ giá trị của ô search
+    private int currentPage = 1; // biến lưu trữ trang hiện tại
+    private int pageSize = 6; // biến lưu trữ số lượng sản phẩm trên 1 trang
+
+    private int totalPages;
+    private int TotalPages {
+        get {
+            return (int)Math.Ceiling((double)displayProducts.Count / pageSize);
+        }
+        set {
+            totalPages = value;
+        }
+    }
+
+
+    @* dùng hàm OnInitializedAsync để call API *@
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private void UpdateDisplayProducts()
+    {
+        displayProducts = products.Skip((currentPage - 1) * pageSize).Take(pageSize).ToList();
+        StateHasChanged();
+    }
+
+    private async Task LoadData()
+    {
+        try
+        {
+            products = await ProductService.GetProductsAsync();
+            isLoading = false;
+            UpdateDisplayProducts(); // cập nhật lại list product hiển thị
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    private void NextPage()
+    {
+        if (currentPage < totalPages)
+        {
+            currentPage++;
+            displayProducts = displayProducts.Skip((currentPage - 1) * pageSize).Take(pageSize).ToList();
+            UpdateDisplayProducts();
+        }
+    }
+
+    @* define hàm SearchProducts *@
+
+    private void HandleKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            Console.WriteLine("Enter key pressed");
+            SearchProducts();
+        }
+    }
+    private void SearchProducts()
+    {
+        Console.WriteLine($"Search query: {searchQuery}");
+        var filterProducts = products
+        .Where(p => string.IsNullOrEmpty(searchQuery) || p.Name.Contains(searchQuery, StringComparison.OrdinalIgnoreCase))
+        .ToList();
+
+        currentPage = 1;
+        @* vì trong hàm UpdateDisplayProducts có dùng products để filter *@
+        @* lại cho displayProducts nên mới cần update lại products *@
+        displayProducts = filterProducts;
+        totalPages = (int)Math.Ceiling((double)displayProducts.Count / pageSize);
+        StateHasChanged();
+
+
+    }
+}

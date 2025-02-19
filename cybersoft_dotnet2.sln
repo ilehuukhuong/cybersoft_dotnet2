@@ -59,6 +59,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "session23_wasm", "session23
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session25", "Session25\Session25.csproj", "{C3A5D74D-A7F4-4CA0-8BF9-54C1E5623D17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session28_Life_Cycle", "Session28_Life_Cycle\Session28_Life_Cycle.csproj", "{20FBB214-ECAC-4056-832E-AD4D18B0748E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session28_BTVN", "Session28_BTVN\Session28_BTVN.csproj", "{EBE2FDE6-AD0F-4BBF-A4EB-2FF9D792A50E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -177,6 +181,14 @@ Global
 		{C3A5D74D-A7F4-4CA0-8BF9-54C1E5623D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3A5D74D-A7F4-4CA0-8BF9-54C1E5623D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3A5D74D-A7F4-4CA0-8BF9-54C1E5623D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20FBB214-ECAC-4056-832E-AD4D18B0748E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20FBB214-ECAC-4056-832E-AD4D18B0748E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20FBB214-ECAC-4056-832E-AD4D18B0748E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20FBB214-ECAC-4056-832E-AD4D18B0748E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBE2FDE6-AD0F-4BBF-A4EB-2FF9D792A50E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE2FDE6-AD0F-4BBF-A4EB-2FF9D792A50E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE2FDE6-AD0F-4BBF-A4EB-2FF9D792A50E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE2FDE6-AD0F-4BBF-A4EB-2FF9D792A50E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

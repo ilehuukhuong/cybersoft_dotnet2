@@ -1,0 +1,27 @@
+﻿@page "/"
+@using Session28_BTVN.Service
+@inject WalletService Wallet
+
+<h3>My Wallet</h3>
+<h1 style="color: gold;">$@Wallet.Balance</h1>
+<p>Total balance</p>
+
+<button class="btn btn-success" @onclick="() => showDeposit = true">Deposit</button>
+<button class="btn btn-danger" @onclick="() => showWithdraw = true">Withdraw</button>
+
+<TransactionHistory Transactions="Wallet.Transactions" />
+
+@if (showDeposit)
+{
+    <ModalDeposit OnClose="() => showDeposit = false" />
+}
+
+@if (showWithdraw)
+{
+    <ModalWithdraw OnClose="() => showWithdraw = false" />
+}
+
+@code {
+    private bool showDeposit = false;
+    private bool showWithdraw = false;
+}

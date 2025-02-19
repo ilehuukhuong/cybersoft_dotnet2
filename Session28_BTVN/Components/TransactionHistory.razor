@@ -1,0 +1,24 @@
+﻿@code {
+    [Parameter] public List<Transaction> Transactions { get; set; } = new();
+}
+
+<h3>Transaction History</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var transaction in Transactions.OrderByDescending(t => t.Timestamp))
+        {
+            <tr class="@(transaction.Type == "Deposit" ? "table-success" : "table-danger")">
+                <td>@transaction.Type</td>
+                <td>@transaction.Amount.ToString("C")</td>
+                <td>@transaction.Timestamp.ToString("dd MMM h:mmtt")</td>
+            </tr>
+        }
+    </tbody>
+</table>
